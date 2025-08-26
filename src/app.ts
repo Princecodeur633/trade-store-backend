@@ -7,6 +7,9 @@ import paymentRoutes from "./routes/payment.routes";
 import notificationRoutes from "./routes/notification.routes";
 import auditRoutes from "./routes/audit.routes";
 import systemConfigRoutes from "./routes/systemConfig.routes";
+import webhookRoutes from "./routes/webhook.routes";
+app.use("/api/webhooks", webhookRoutes);
+
 
 const app = express();
 
@@ -22,3 +25,5 @@ app.use("/api/audit-logs", auditRoutes);
 app.use("/api/system-configs", systemConfigRoutes);
 
 export default app;
+
+app.use("/api/webhooks", webhookRoutes);

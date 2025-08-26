@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+const { DataTypes } = require("sequelize");
 import sequelize from "../config/db";
 
 const Payment = sequelize.define("Payment", {
@@ -14,4 +14,4 @@ const Payment = sequelize.define("Payment", {
   timestamps: true
 });
 
-export default Payment;
+module.exports = Payment;
